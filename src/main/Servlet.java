@@ -15,6 +15,10 @@ import javax.xml.transform.TransformerException;
 import org.apache.fop.apps.FOPException;
 
 
+// Class related to processing input data and also returning relevant output.
+// doPost method fills instance of CurriculumVitae class with data and also with runs conversion process with use of Converter.
+// After it doGet method related to enabling download of pdf file is triggered.
+
 @WebServlet("/enter-data")
 @MultipartConfig
 public class Servlet extends HttpServlet {

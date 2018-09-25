@@ -8,6 +8,8 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+// This class is used by XStream's object in process of creating xml String.
+
 public class CurriculumVitae {
 	@SuppressWarnings("unused")
 	private String fullName;

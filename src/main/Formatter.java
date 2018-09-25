@@ -5,6 +5,10 @@ import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
 
+
+// After using XMLCreator created xmlString doesn't have relevant format at the beginning. 
+// Formatting is related to display with use of Stylesheet.xsl.
+
 public class Formatter {
 	
 	private String xmlString;

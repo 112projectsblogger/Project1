@@ -1,5 +1,7 @@
 package main;
 
+// This class is used to prepare paths for various files, result of only method includes path with Project1/build/classes/main/ and supplied String added.
+
 public class PathPreparator {
 		
 	public static String preparePath(String fileName) {

@@ -8,6 +8,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+// Test related to Element class.
+
 class ElementTest {
 
 	List<String> elementContent = new ArrayList<String>();
