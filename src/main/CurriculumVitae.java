@@ -8,6 +8,9 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+
 /** 
  * This class is used by XStream's object in process of creating xml String.
  * @author MJazy
@@ -38,6 +41,34 @@ public class CurriculumVitae {
 	private String skills;
 	
 	public CurriculumVitae() {
+	}
+
+	/**
+	 * Constructor that should be used to instantiate object with HttpServletRequest's data.
+	 * @param httpServletRequest containing relevant cv data.
+	 */
+	public CurriculumVitae(HttpServletRequest httpServletRequest) {
+		this.setFullName(httpServletRequest.getParameter("fullName"));
+		this.setBirthdate(httpServletRequest.getParameter("birthdate"));
+		this.setCity(httpServletRequest.getParameter("city"));
+		this.setPhoneNumber(httpServletRequest.getParameter("phoneNumber"));
+		try {
+			this.setPicture(httpServletRequest.getPart("picture").getInputStream());
+		} catch (IOException | ServletException e) {
+			e.printStackTrace();
+		}	
+		this.setCollege(httpServletRequest.getParameterValues("college"));
+		this.setFieldOfStudy(httpServletRequest.getParameterValues("fieldOfStudy"));
+		this.setStudyStartDate(httpServletRequest.getParameterValues("studyStartDate"));				
+		this.setStudyEndDate(httpServletRequest.getParameterValues("studyEndDate"));			
+		this.setCompany(httpServletRequest.getParameterValues("company"));
+		this.setPost(httpServletRequest.getParameterValues("post"));
+		this.setJobStartDate(httpServletRequest.getParameterValues("jobStartDate"));			
+		this.setJobEndDate(httpServletRequest.getParameterValues("jobEndDate"));			
+		this.setLanguage(httpServletRequest.getParameterValues("languageName"));
+		this.setLanguageLevel(httpServletRequest.getParameterValues("languageLevel"));			
+		this.setSkills(httpServletRequest.getParameter("skills"));			
+
 	}
 	
 	public void setFullName(String fullName) {

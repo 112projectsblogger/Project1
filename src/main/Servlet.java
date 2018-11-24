@@ -30,7 +30,7 @@ public class Servlet extends HttpServlet {
 		
 	private static final long serialVersionUID = 1L;
 
-	private CurriculumVitae curriculumVitae = new CurriculumVitae();
+	
 	
 	
 	public void doGet(HttpServletResponse httpServletResponse) throws IOException {
@@ -55,23 +55,8 @@ public class Servlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse httpServletResponse) throws IOException, ServletException {
 		
-		curriculumVitae.setFullName(request.getParameter("fullName"));
-		curriculumVitae.setBirthdate(request.getParameter("birthdate"));
-		curriculumVitae.setCity(request.getParameter("city"));
-		curriculumVitae.setPhoneNumber(request.getParameter("phoneNumber"));
-		curriculumVitae.setPicture(request.getPart("picture").getInputStream());	
-		curriculumVitae.setCollege(request.getParameterValues("college"));
-		curriculumVitae.setFieldOfStudy(request.getParameterValues("fieldOfStudy"));
-		curriculumVitae.setStudyStartDate(request.getParameterValues("studyStartDate"));				
-		curriculumVitae.setStudyEndDate(request.getParameterValues("studyEndDate"));			
-		curriculumVitae.setCompany(request.getParameterValues("company"));
-		curriculumVitae.setPost(request.getParameterValues("post"));
-		curriculumVitae.setJobStartDate(request.getParameterValues("jobStartDate"));			
-		curriculumVitae.setJobEndDate(request.getParameterValues("jobEndDate"));			
-		curriculumVitae.setLanguage(request.getParameterValues("languageName"));
-		curriculumVitae.setLanguageLevel(request.getParameterValues("languageLevel"));			
-		curriculumVitae.setSkills(request.getParameter("skills"));			
-
+		CurriculumVitae curriculumVitae = new CurriculumVitae(request);
+		
 		Converter converter = new Converter(curriculumVitae);
 		try {
 			converter.runConversionProcess();
