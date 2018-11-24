@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import main.Formatter;
 
-// This class is related to testing Formatter class. 
-// Method formatString() uses few private methods of this class.
 
 class FormatterTest {
 

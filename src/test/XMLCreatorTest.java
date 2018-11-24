@@ -13,7 +13,6 @@ import main.CurriculumVitae;
 import main.PathPreparator;
 import main.XMLCreator;
 
-// String created with use of XMLCreator class is tested with this class.
 
 class XMLCreatorTest {
 		

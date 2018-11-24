@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import main.PathPreparator;
 
-// Test related to PathPreparator class.
-
 class PathPreparatorTest {
 
 	@Test
