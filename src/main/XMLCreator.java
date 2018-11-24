@@ -3,7 +3,9 @@ package main;
 import com.thoughtworks.xstream.XStream;
 
 /**
- * This class is related to creating xml String with use of XStream and CurriculumVitae classes.
+ * This class is related to creating xml String with use of XStream and
+ * CurriculumVitae classes.
+ * 
  * @author MJazy
  *
  */
