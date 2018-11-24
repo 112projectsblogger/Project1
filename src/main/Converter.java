@@ -21,7 +21,11 @@ import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
 import org.apache.xmlgraphics.util.MimeConstants;
 
-// With use of this class cv files with extensions .xml and .pdf are created.
+/** 
+ * With use of this class cv files with extensions .xml and .pdf are created.
+ * @author MJazy
+ *
+ */
 
 public class Converter 
 {

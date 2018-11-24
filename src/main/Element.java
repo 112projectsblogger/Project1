@@ -2,7 +2,11 @@ package main;
 
 import java.util.List;
 
-// Use of this class is related to createComplexElement method of Formatter class.
+/** 
+ * Use of this class is related to createComplexElement method of Formatter class.
+ * @author MJazy
+ *
+ */
 
 public class Element {
 
